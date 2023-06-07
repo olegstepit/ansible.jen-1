@@ -10,6 +10,4 @@ RUN apt-get install -y ansible
 RUN apt-add-repository -y ppa:ansible/ansible
 RUN apt-get update
 RUN apt-get upgrade -y
-RUN echo '[privilege_escalation]
-      become_ask_pass = True 
-      ' >> /etc/ansible/ansible.cfg
+RUN echo '[privilege_escalation]\become_ask_pass = True ' >> /etc/ansible/ansible.cfg
