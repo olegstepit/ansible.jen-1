@@ -11,6 +11,7 @@ RUN apt-get install -y python3 python3-pip
 RUN apt-get install -y ansible
 RUN apt-get update
 RUN apt-get upgrade -y
-RUN echo '[privilege_escalation]become_ask_pass = True ' >> /etc/ansible/ansible.cfg
+RUN echo '[privilege_escalation] ' >> /etc/ansible/ansible.cfg
+RUN echo 'become_ask_pass = True ' >> /etc/ansible/ansible.cfg
 RUN echo '[defaults]' >> /etc/ansible/ansible.cfg
 RUN echo 'host_key_checking = False' >> /etc/ansible/ansible.cfg
